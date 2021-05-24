@@ -10,8 +10,6 @@ Shell script for wrapping [mhsendmail](https://github.com/mailhog/mhsendmail) so
 | SMTP_HOST     | SMTP server host      | localhost |
 | SMTP_PORT     | SMTP server port      | 1025      |
 
-SMTP_HOST and SMTP_PORT
-
 ## Usage
 
 ```

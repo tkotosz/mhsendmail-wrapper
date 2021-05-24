@@ -1,6 +1,7 @@
 # mhsendmail-wrapper
 
-[Docker image](https://hub.docker.com/repository/docker/tkotosz/mhsendmail-wrapper) for wrapping [mhsendmail](https://github.com/mailhog/mhsendmail) so that the SMTP address can be configured in environment variable.
+Shell script for wrapping [mhsendmail](https://github.com/mailhog/mhsendmail) so that the SMTP address can be configured in environment variable.
+[Docker image](https://hub.docker.com/repository/docker/tkotosz/mhsendmail-wrapper) is also available.
 
 ## Environment variables
 
@@ -25,4 +26,4 @@ COPY --from=tkotosz/mhsendmail-wrapper /usr/bin/mhsendmail-wrapper /usr/local/bi
 ...
 ```
 
-See `Dockerfile-php` in the `test` for PHP example.
+See `Dockerfile-php` in the `test` folder for PHP example.

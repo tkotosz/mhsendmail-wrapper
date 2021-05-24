@@ -1,0 +1,8 @@
+FROM php:7.4-cli
+
+COPY --from=tkotosz/mhsendmail:0.2.0 /usr/bin/mhsendmail /usr/local/bin/mhsendmail
+COPY --from=tkotosz/mhsendmail-wrapper /usr/bin/mhsendmail-wrapper /usr/local/bin/mhsendmail-wrapper
+
+RUN echo 'sendmail_path = "/usr/local/bin/mhsendmail-wrapper"' > /usr/local/etc/php/php.ini;
+
+ENTRYPOINT ["sleep","infinity"]

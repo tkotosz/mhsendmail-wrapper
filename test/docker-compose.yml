@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  mhsendmail-with-php:
+    build:
+      context: .
+      dockerfile: Dockerfile-php
+    environment:
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    ports:
+      - "18025:8025"
